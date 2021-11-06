@@ -7,15 +7,26 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            var add = new AddHandler();
-            var divide = new DivideHandler();
-            var subtract = new SubtractHandler();
-            var multiply = new MultiplyHandler();
 
-            var example = "1 + (-10)";
-            add.SetNext(divide).SetNext(subtract).SetNext(multiply);
-            var result = add.Handle(example);
+            var calculator = new Calculator();
+            var a = 2;
+            var b = 300;
+            var result = calculator.Calculate($"{a} + {b}");
+            Console.WriteLine("----------------------------");
             Console.WriteLine(result);
+            Console.WriteLine("----------------------------");
+            result = calculator.Calculate($"{a} - {b}");
+            Console.WriteLine(result);
+            Console.WriteLine("----------------------------");
+            result = calculator.Calculate($"{a} * {b}");
+            Console.WriteLine(result);
+            Console.WriteLine("----------------------------");
+            result = calculator.Calculate($"{a} / {b}");
+            Console.WriteLine(result);
+            Console.WriteLine("----------------------------");
+            result = calculator.Calculate($"{a} dwqdqw {b}");
+            Console.WriteLine(result);
+            Console.WriteLine("----------------------------");
         }
     }
 }

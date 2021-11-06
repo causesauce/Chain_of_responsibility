@@ -23,8 +23,8 @@ namespace Calculator.Chain
             if (_regex.IsMatch(data))
             {
                 var text = data.Replace("(", "").Replace(")", "").Trim().Split("/");
-                var a = Int32.Parse(text[0]);
-                var b = Int32.Parse(text[1]);
+                var a = float.Parse(text[0]);
+                var b = float.Parse(text[1]);
                 if(b == 0)
                 {
                     return "cannot devide by zero";

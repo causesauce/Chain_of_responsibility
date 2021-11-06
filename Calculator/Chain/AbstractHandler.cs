@@ -21,7 +21,8 @@ namespace Calculator.Chain
             }
             else
             {
-                return null;
+                return $"{this.GetType().Name} responses: give string is not correct, should be in a given format: " +
+                    $"a+b OR a + b OR a + (-b) OR a+(-b).\ninstead of + there could be used -, *, / operands.\ndivision by zero is forbidden.";
             }
         }
     }

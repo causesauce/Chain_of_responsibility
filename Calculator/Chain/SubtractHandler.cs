@@ -22,7 +22,7 @@ namespace Calculator.Chain
             var data = request as string;
             if (_regex.IsMatch(data))
             {
-                var text = data.Replace("(", "").Replace(")", "").Trim().Split("-");
+                var text = data.Replace("(", "").Replace(")", "").Trim().Split("-", 2);
                 var a = Int32.Parse(text[0]);
                 var b = Int32.Parse(text[1]);
                 return $"{this.GetType().Name} responses: {a - b}";
