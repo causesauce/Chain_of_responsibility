@@ -1,3 +1,3 @@
 # chain_of_responsibility
-impltmentation of chain of responsibility design pattern C#
+implementation of the chain of responsibility design pattern in C#
 all the user interaction happens in the Program.cs file
